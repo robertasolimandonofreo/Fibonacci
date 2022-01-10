@@ -8,6 +8,8 @@ services:
     build: ./
     container_name: grafana
     environment:
+      - GF_PLUGINS_ALLOW=${GF_PLUGINS_ALLOW}
+      - GF_INSTALL_PLUGINS=${GF_INSTALL_PLUGINS}
       - GF_SECURITY_ADMIN_PASSWORD=${GF_SECURITY_ADMIN_PASSWORD}
       - GF_SECURITY_ADMIN_USER=${GF_SECURITY_ADMIN_USER}
     ports:
